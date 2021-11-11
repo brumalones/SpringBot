@@ -1,0 +1,8 @@
+{
+  "texto": "apresentação dos Menus",
+  "Op": [
+    "op1",
+    "op2"
+  ],
+  "ref": "localhos:123/url/{op1}"
+}
