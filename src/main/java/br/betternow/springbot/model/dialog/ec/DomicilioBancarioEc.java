@@ -2,17 +2,17 @@ package br.betternow.springbot.model.dialog.ec;
 
 import java.util.HashMap;
 
-public class DomicilioBancarioEC {
+public class DomicilioBancarioEc {
 
     private String title;
     private String message;
     private HashMap<String, String> choice;
 
-    public DomicilioBancarioEC() {
+    public DomicilioBancarioEc() {
 
     }
 
-    public DomicilioBancarioEC(String title, String message) {
+    public DomicilioBancarioEc(String title, String message) {
         this.title = title;
         this.message = message;
         this.choice = setChoice();

@@ -14,7 +14,7 @@ public class ConversationReferencesToJson {
 
     public void put(ConversationReference[] reference) throws IOException {
 
-        mapper.writeValue(new File("C:\\BetterNow\\conversationReferences.json"), reference);
+        mapper.writeValue(new File("conversationReferences.json"), reference);
 
     }
 
@@ -29,7 +29,7 @@ public class ConversationReferencesToJson {
 
         referenceList.add(reference);
 
-        mapper.writeValue(new File("C:\\BetterNow\\conversationReferences.json"), referenceList);
+        mapper.writeValue(new File("conversationReferences.json"), referenceList);
 
     }
 

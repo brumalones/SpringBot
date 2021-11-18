@@ -5,8 +5,8 @@ import br.betternow.springbot.controller.dto.ec.DomicilioBancarioEcDto;
 import br.betternow.springbot.controller.dto.ec.MeioPagamentoEcDto;
 import br.betternow.springbot.controller.dto.ec.RegistradoraECDto;
 import br.betternow.springbot.controller.form.ec.RegistradoraEcForm;
-import br.betternow.springbot.model.dialog.ec.BandeiraEC;
-import br.betternow.springbot.model.dialog.ec.DomicilioBancarioEC;
+import br.betternow.springbot.model.dialog.ec.BandeiraEc;
+import br.betternow.springbot.model.dialog.ec.DomicilioBancarioEc;
 import br.betternow.springbot.model.dialog.ec.MeioPagamentoEc;
 import br.betternow.springbot.model.dialog.ec.RegistradoraEC;
 import br.betternow.springbot.repository.SolicitacaoEcRepository;
@@ -55,7 +55,7 @@ public class SolicitacaoECController {
     public ResponseEntity bandeira(@RequestHeader("uuid") String uuid) {
         return ResponseEntity.ok(
                 new BandeiraEcDto(
-                        new BandeiraEC("Solicitação de EC", "Deseja inserir todas as bandeiras " +
+                        new BandeiraEc("Solicitação de EC", "Deseja inserir todas as bandeiras " +
                                 "e todos os tipos de pagamentos?")
                 )
         );
@@ -65,7 +65,7 @@ public class SolicitacaoECController {
     public ResponseEntity domiciliobancario(@RequestHeader("uuid") String uuid) {
         return ResponseEntity.ok(
                 new DomicilioBancarioEcDto(
-                        new DomicilioBancarioEC("Solicitação de EC", "Informe o Domicilio Bancário")
+                        new DomicilioBancarioEc("Solicitação de EC", "Informe o Domicilio Bancário")
                 )
         );
     }

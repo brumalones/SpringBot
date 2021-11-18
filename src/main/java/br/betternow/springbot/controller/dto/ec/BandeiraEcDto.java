@@ -1,6 +1,6 @@
 package br.betternow.springbot.controller.dto.ec;
 
-import br.betternow.springbot.model.dialog.ec.BandeiraEC;
+import br.betternow.springbot.model.dialog.ec.BandeiraEc;
 
 import java.util.HashMap;
 
@@ -13,11 +13,11 @@ public class BandeiraEcDto {
     private String action;
     private String redirection;
 
-    public BandeiraEcDto(BandeiraEC bandeiraEC) {
-        this.dialogName = "BandeiraEC";
-        this.title = bandeiraEC.getTitle();
-        this.message = bandeiraEC.getMessage();
-        this.choice = bandeiraEC.getChoice();
+    public BandeiraEcDto(BandeiraEc bandeiraEc) {
+        this.dialogName = "BandeiraEc";
+        this.title = bandeiraEc.getTitle();
+        this.message = bandeiraEc.getMessage();
+        this.choice = bandeiraEc.getChoice();
         this.action = "PUT /dialogs/solicitacaoec/update";
         this.redirection = "GET /dialogs/solicitacaoec/domiciliobancario/";
     }

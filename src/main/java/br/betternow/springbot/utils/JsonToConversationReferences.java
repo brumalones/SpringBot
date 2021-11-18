@@ -11,7 +11,7 @@ public class JsonToConversationReferences {
     public ConversationReference[] get() throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
-        File file = new File("C:\\BetterNow\\conversationReferences.json");
+        File file = new File("conversationReferences.json");
 
         if (file.exists()) {
             return mapper.readValue(file, (new ConversationReference[]{}).getClass());

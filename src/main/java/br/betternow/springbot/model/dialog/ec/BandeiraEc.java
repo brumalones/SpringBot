@@ -2,17 +2,17 @@ package br.betternow.springbot.model.dialog.ec;
 
 import java.util.HashMap;
 
-public class BandeiraEC {
+public class BandeiraEc {
 
     private String title;
     private String message;
     private HashMap<Integer, String> choice;
 
-    public BandeiraEC() {
+    public BandeiraEc() {
 
     }
 
-    public BandeiraEC(String title, String message) {
+    public BandeiraEc(String title, String message) {
         this.title = title;
         this.message = message;
         this.choice = setChoice();

@@ -1,6 +1,6 @@
 package br.betternow.springbot.controller.dto.ec;
 
-import br.betternow.springbot.model.dialog.ec.DomicilioBancarioEC;
+import br.betternow.springbot.model.dialog.ec.DomicilioBancarioEc;
 
 import java.util.HashMap;
 
@@ -13,11 +13,11 @@ public class DomicilioBancarioEcDto {
     private final String action;
     private final String redirection;
 
-    public DomicilioBancarioEcDto(DomicilioBancarioEC domicilioBancario) {
-        this.dialogName = "domicilioBancarioEC";
-        this.title = domicilioBancario.getTitle();
-        this.message = domicilioBancario.getMessage();
-        this.choice = domicilioBancario.getChoice();
+    public DomicilioBancarioEcDto(DomicilioBancarioEc domicilioBancarioEc) {
+        this.dialogName = "DomicilioBancarioEc";
+        this.title = domicilioBancarioEc.getTitle();
+        this.message = domicilioBancarioEc.getMessage();
+        this.choice = domicilioBancarioEc.getChoice();
         this.action = "PUT /dialogs/solicitacaoec/update";
         this.redirection = "POST /dialogs/solicitacaoec/confirm";
     }
