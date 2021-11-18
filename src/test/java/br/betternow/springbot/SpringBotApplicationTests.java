@@ -1,4 +1,4 @@
-package com.example.SpringBot;
+package br.betternow.springbot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

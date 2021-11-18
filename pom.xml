@@ -10,9 +10,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.example</groupId>
-	<artifactId>SpringBot</artifactId>
+	<groupId>br.betternow</groupId>
+	<artifactId>springbot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>SpringBot</name>
 	<description>Demo bot chat project for Spring Boot</description>
 
