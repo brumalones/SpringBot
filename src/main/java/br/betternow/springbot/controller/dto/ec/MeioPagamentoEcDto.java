@@ -1,6 +1,7 @@
 package br.betternow.springbot.controller.dto.ec;
 
 import br.betternow.springbot.model.dialog.ec.MeioPagamentoEc;
+import br.betternow.springbot.model.dialog.ec.enums.SolctEcEnum;
 
 import java.util.HashMap;
 
@@ -9,7 +10,7 @@ public class MeioPagamentoEcDto {
     private String dialogName;
     private String title;
     private String message;
-    private HashMap<String, String> choice;
+    private HashMap<SolctEcEnum, String> choice;
     private String action;
     private String redirection;
 
@@ -34,7 +35,7 @@ public class MeioPagamentoEcDto {
         return message;
     }
 
-    public HashMap<String, String> getChoice() {
+    public HashMap<SolctEcEnum, String> getChoice() {
         return choice;
     }
 
@@ -45,4 +46,5 @@ public class MeioPagamentoEcDto {
     public String getRedirection() {
         return redirection;
     }
+
 }

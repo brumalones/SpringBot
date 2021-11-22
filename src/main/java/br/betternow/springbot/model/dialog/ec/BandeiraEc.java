@@ -1,12 +1,14 @@
 package br.betternow.springbot.model.dialog.ec;
 
+import br.betternow.springbot.model.dialog.ec.enums.SolctEcEnum;
+
 import java.util.HashMap;
 
 public class BandeiraEc {
 
     private String title;
     private String message;
-    private HashMap<Integer, String> choice;
+    private HashMap<SolctEcEnum, String> choice;
 
     public BandeiraEc() {
 
@@ -18,10 +20,10 @@ public class BandeiraEc {
         this.choice = setChoice();
     }
 
-    public HashMap<Integer, String> setChoice() {
-        HashMap<Integer, String> choices = new HashMap<>();
-        choices.put(1, "Sim");
-        choices.put(0, "Não");
+    public HashMap<SolctEcEnum, String> setChoice() {
+        HashMap<SolctEcEnum, String> choices = new HashMap<>();
+        choices.put(SolctEcEnum.bandeira_accept, SolctEcEnum.bandeira_accept.toText());
+        choices.put(SolctEcEnum.bandeira_reject, SolctEcEnum.bandeira_reject.toText());
         return choices;
     }
 
@@ -33,7 +35,7 @@ public class BandeiraEc {
         return message;
     }
 
-    public HashMap<Integer, String> getChoice() {
+    public HashMap<SolctEcEnum, String> getChoice() {
         return choice;
     }
 }

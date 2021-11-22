@@ -1,12 +1,14 @@
 package br.betternow.springbot.model.dialog.ec;
 
+import br.betternow.springbot.model.dialog.ec.enums.SolctEcEnum;
+
 import java.util.HashMap;
 
 public class MeioPagamentoEc {
 
     private String title;
     private String message;
-    private HashMap<String, String> choice;
+    private HashMap<SolctEcEnum, String> choice;
 
     public MeioPagamentoEc() {
     }
@@ -17,11 +19,11 @@ public class MeioPagamentoEc {
         this.choice = setChoice();
     }
 
-    private HashMap<String,String> setChoice(){
-        HashMap<String, String> choices = new HashMap<>();
-        choices.put("Individual", "Individual");
-        choices.put("Cadeia_Centralizada", "Cadeia Centralizada");
-        choices.put("Cadeia_Descentralizada", "Cadeia Descentralizada");
+    private HashMap<SolctEcEnum, String> setChoice() {
+        HashMap<SolctEcEnum, String> choices = new HashMap<>();
+        choices.put(SolctEcEnum.meio_Pgto_Individual, SolctEcEnum.meio_Pgto_Individual.toText());
+        choices.put(SolctEcEnum.meio_Pgto_Cadeia_Centralizada, SolctEcEnum.meio_Pgto_Cadeia_Centralizada.toText());
+        choices.put(SolctEcEnum.meio_Pgto_Cadeia_Descentralizada, SolctEcEnum.meio_Pgto_Cadeia_Descentralizada.toText());
         return choices;
     }
 
@@ -33,7 +35,7 @@ public class MeioPagamentoEc {
         return message;
     }
 
-    public HashMap<String, String> getChoice() {
+    public HashMap<SolctEcEnum, String> getChoice() {
         return choice;
     }
 }

@@ -6,26 +6,27 @@ import br.betternow.springbot.model.dialog.RootDialog;
 import br.betternow.springbot.controller.dto.*;
 import br.betternow.springbot.model.dialog.Unavailable;
 import br.betternow.springbot.model.dialog.ec.SolicitacaoEc;
-import br.betternow.springbot.utils.ConversationReferencesToJson;
+import br.betternow.springbot.repository.ConversationReferenceRepository;
 import br.betternow.springbot.utils.UniversallyUniqueIdentifier;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.Map;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/dialogs")
 public class GenericController {
 
+    @Autowired
+    private ConversationReferenceRepository referenceRepository;
+
     @GetMapping("/token")
-    public ResponseEntity<Object> getUUID() throws IOException {
+    public ResponseEntity<Object> token() throws IOException {
         String uuid = new UniversallyUniqueIdentifier().getUUID();
         ConversationReference reference = new ConversationReference();
         reference.setUuid(uuid);
-        ConversationReferencesToJson toJson = new ConversationReferencesToJson();
-        toJson.set(reference);
+        referenceRepository.save(reference);
         return ResponseEntity.ok(new ConversationReferencesDto(reference));
     }
 

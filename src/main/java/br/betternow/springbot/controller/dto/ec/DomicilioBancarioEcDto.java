@@ -1,6 +1,7 @@
 package br.betternow.springbot.controller.dto.ec;
 
 import br.betternow.springbot.model.dialog.ec.DomicilioBancarioEc;
+import br.betternow.springbot.model.dialog.ec.enums.SolctEcEnum;
 
 import java.util.HashMap;
 
@@ -9,7 +10,7 @@ public class DomicilioBancarioEcDto {
     private final String dialogName;
     private final String title;
     private final String message;
-    private final HashMap<String, String> choice;
+    private final HashMap<SolctEcEnum, String> choice;
     private final String action;
     private final String redirection;
 
@@ -19,7 +20,7 @@ public class DomicilioBancarioEcDto {
         this.message = domicilioBancarioEc.getMessage();
         this.choice = domicilioBancarioEc.getChoice();
         this.action = "PUT /dialogs/solicitacaoec/update";
-        this.redirection = "POST /dialogs/solicitacaoec/confirm";
+        this.redirection = "GET /dialogs/solicitacaoec/confirm";
     }
 
     public String getDialogName() {
@@ -34,7 +35,7 @@ public class DomicilioBancarioEcDto {
         return message;
     }
 
-    public HashMap<String, String> getChoice() {
+    public HashMap<SolctEcEnum, String> getChoice() {
         return choice;
     }
 
