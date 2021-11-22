@@ -34,8 +34,14 @@ public class SolicitacaoECController {
 
     @PostMapping("/create")
     public ResponseEntity createSolicitacao(@RequestHeader("uuid") String uuid, UriComponentsBuilder builder) {
-        URI uri = builder.path("").buildAndExpand("").toUri();
-        return ResponseEntity.created(uri).body("Solicitação criada com sucesso!");
+        Optional<ConversationReference> referenceOptional = referenceRepository.findById(uuid);
+        if (referenceOptional.isPresent()) {
+            URI uri = builder.path("").buildAndExpand("").toUri();
+            return ResponseEntity.created(uri).body("Solicitação criada com sucesso!");
+        }
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(
+                new GenericHandler("uuid", "uuid is not valid")
+        );
     }
 
     @GetMapping("/confirm")

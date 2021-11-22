@@ -29,7 +29,7 @@ public class ConfirmarSolicitacaoEcDto {
         this.choice = confirmarSoclicitacao.getChoice();
         this.atributes = confirmarSoclicitacao.getAtributes();
         this.message = confirmationMessage();
-        this.action = "POST /dialogs/solicitacaoec/save";
+        this.action = "POST /dialogs/solicitacaoec/create";
         this.redirection = "GET /dialogs/root";
     }
 
