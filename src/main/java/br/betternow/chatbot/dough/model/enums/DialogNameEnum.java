@@ -10,14 +10,10 @@ public enum DialogNameEnum {
     solicitar_Cancelamento("Soliciatar cancelamanto"),
     rejeicao_CIP_Pagfor("Rejeição CIP/Pagfor");
 
-    private String text;
+    private final String text;
 
     DialogNameEnum(String text) {
         this.text = text;
-    }
-
-    public String toText() {
-        return text;
     }
 
     public static DialogNameEnum fromText(String text) {
@@ -27,5 +23,9 @@ public enum DialogNameEnum {
             }
         }
         return null;
+    }
+
+    public String toText() {
+        return text;
     }
 }

@@ -17,7 +17,7 @@ public class ValidationHandler {
     @ExceptionHandler(Exception.class)
     public GenericHandler notValid(NullPointerException exception) {
 
-        return new GenericHandler("Attributtes","Attributte Fields not set");
+        return new GenericHandler("Attributtes", "Attributte Fields not set");
     }
 
 }

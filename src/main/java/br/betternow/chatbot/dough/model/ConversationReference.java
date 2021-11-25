@@ -1,7 +1,5 @@
 package br.betternow.chatbot.dough.model;
 
-import br.betternow.chatbot.dough.controller.dto.solicitar.ec.enums.SolicitarEcChavesEnum;
-import br.betternow.chatbot.dough.controller.dto.solicitar.ec.enums.SolicitarEcValoresEnum;
 import br.betternow.chatbot.dough.model.enums.DialogNameEnum;
 
 import javax.persistence.*;

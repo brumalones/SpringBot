@@ -5,14 +5,10 @@ public enum DialogType {
     choice("Apenas escolha"),
     action("Apenas ação");
 
-    private String text;
+    private final String text;
 
     DialogType(String text) {
         this.text = text;
-    }
-
-    public String toText() {
-        return text;
     }
 
     public static DialogType fromText(String text) {
@@ -22,5 +18,9 @@ public enum DialogType {
             }
         }
         return null;
+    }
+
+    public String toText() {
+        return text;
     }
 }

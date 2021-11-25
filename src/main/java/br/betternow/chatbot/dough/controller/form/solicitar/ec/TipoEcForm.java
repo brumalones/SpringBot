@@ -4,10 +4,8 @@ import br.betternow.chatbot.dough.controller.dto.solicitar.ec.enums.SolicitarEcC
 import br.betternow.chatbot.dough.controller.dto.solicitar.ec.enums.SolicitarEcValoresEnum;
 import br.betternow.chatbot.dough.controller.form.GenericForm;
 import br.betternow.chatbot.dough.model.ConversationReference;
-import br.betternow.chatbot.dough.model.enums.DialogNameEnum;
 import br.betternow.chatbot.dough.repository.solicita.ec.ConversationReferenceRepository;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class TipoEcForm extends GenericForm {

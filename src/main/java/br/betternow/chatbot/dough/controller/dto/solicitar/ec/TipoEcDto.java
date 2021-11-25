@@ -1,10 +1,8 @@
 package br.betternow.chatbot.dough.controller.dto.solicitar.ec;
 
-import br.betternow.chatbot.dough.controller.dto.ConversationReferenceDto;
 import br.betternow.chatbot.dough.controller.dto.GenericDialogDto;
 import br.betternow.chatbot.dough.controller.dto.solicitar.ec.enums.SolicitarEcValoresEnum;
 import br.betternow.chatbot.dough.model.ConversationReference;
-import br.betternow.chatbot.dough.repository.solicita.ec.ConversationReferenceRepository;
 
 import java.util.HashMap;
 

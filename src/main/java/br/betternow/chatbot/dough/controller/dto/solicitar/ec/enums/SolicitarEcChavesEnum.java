@@ -1,7 +1,5 @@
 package br.betternow.chatbot.dough.controller.dto.solicitar.ec.enums;
 
-import br.betternow.chatbot.dough.model.enums.DialogType;
-
 public enum SolicitarEcChavesEnum {
 
     tipoEC("Tipo do EC"),
@@ -9,14 +7,10 @@ public enum SolicitarEcChavesEnum {
     domclioEC("Domicilo Bancario do EC"),
     bandeiraEC("Bandeiras");
 
-    private String text;
+    private final String text;
 
     SolicitarEcChavesEnum(String text) {
         this.text = text;
-    }
-
-    public String toText() {
-        return text;
     }
 
     public static SolicitarEcChavesEnum fromText(String text) {
@@ -26,6 +20,10 @@ public enum SolicitarEcChavesEnum {
             }
         }
         return null;
+    }
+
+    public String toText() {
+        return text;
     }
 
 }

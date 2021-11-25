@@ -5,7 +5,7 @@ import br.betternow.chatbot.dough.model.ConversationReference;
 import br.betternow.chatbot.dough.model.enums.DialogNameEnum;
 import br.betternow.chatbot.dough.repository.solicita.ec.ConversationReferenceRepository;
 
-public class ChosenDialogForm extends GenericForm{
+public class ChosenDialogForm extends GenericForm {
 
     public ChosenDialogForm() {
     }

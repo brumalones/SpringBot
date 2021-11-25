@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DoughApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(DoughApplication.class, args);
+        SpringApplication.run(DoughApplication.class, args);
 
 
-	}
+    }
 
 
 }
