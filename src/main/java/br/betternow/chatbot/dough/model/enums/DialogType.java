@@ -1,0 +1,26 @@
+package br.betternow.chatbot.dough.model.enums;
+
+public enum DialogType {
+
+    choice("Apenas escolha"),
+    action("Apenas ação");
+
+    private String text;
+
+    DialogType(String text) {
+        this.text = text;
+    }
+
+    public String toText() {
+        return text;
+    }
+
+    public static DialogType fromText(String text) {
+        for (DialogType dialogType : DialogType.values()) {
+            if (dialogType.text.equalsIgnoreCase(text)) {
+                return dialogType;
+            }
+        }
+        return null;
+    }
+}
